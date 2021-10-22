@@ -19,6 +19,6 @@ If you are a Developer and want to use this API urself, you are 100% free to do 
 <dependency>
     <groupId>com.github.StunterLetsPlay</groupId>
     <artifactId>SLPEngine</artifactId>
-    <version>1.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```

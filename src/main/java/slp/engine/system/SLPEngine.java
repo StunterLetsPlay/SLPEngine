@@ -3,6 +3,7 @@ package slp.engine.system;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
+import slp.engine.api.inventory.InventoryListener;
 
 /**
  * @version 1.0
@@ -33,6 +34,7 @@ public class SLPEngine extends JavaPlugin {
 
     public void registerEvents() {
         PluginManager pm = Bukkit.getPluginManager();
+        pm.registerEvents(new InventoryListener(), this);
     }
 
     public void registerCommands() {

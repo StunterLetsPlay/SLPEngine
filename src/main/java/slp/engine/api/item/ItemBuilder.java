@@ -1,4 +1,4 @@
-package slp.engine.api;
+package slp.engine.api.item;
 
 import org.bukkit.*;
 import org.bukkit.block.banner.Pattern;

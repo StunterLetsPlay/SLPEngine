@@ -18,10 +18,7 @@ public class SLPEngine extends JavaPlugin {
     public void onEnable() {
         instance = this;
 
-        Bukkit.getConsoleSender().sendMessage(pr + "§bEnabled!");
-        Bukkit.getConsoleSender().sendMessage(pr + "§fVersion: §b" + this.getDescription().getVersion());
-        Bukkit.getConsoleSender().sendMessage(pr + "§fCoded by: §b" + this.getDescription().getAuthors());
-        Bukkit.getConsoleSender().sendMessage(pr + "§b§l" + "https://twitter.com/StunterLetsPlay");
+        sendConsoleLoadMessage(pr, this.getDescription().getVersion());
 
         registerEvents();
         registerCommands();
@@ -43,5 +40,12 @@ public class SLPEngine extends JavaPlugin {
 
     public static SLPEngine getInstance() {
         return instance;
+    }
+
+    public void sendConsoleLoadMessage(String pr, String version){
+        Bukkit.getConsoleSender().sendMessage(pr + "§bEnabled!");
+        Bukkit.getConsoleSender().sendMessage(pr + "§fVersion: §b" + version);
+        Bukkit.getConsoleSender().sendMessage(pr + "§fCoded by: §b" + "StunterLetsPlay");
+        Bukkit.getConsoleSender().sendMessage(pr + "§b§l" + "https://twitter.com/StunterLetsPlay");
     }
 }
